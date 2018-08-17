@@ -63,7 +63,7 @@ const extendSupportMap = {
     }),
 };
 
-module.exports = { extendSupportMap, foo: function (city,link){
+module.exports = { extendSupportMap, createCard: function (city,link){
     return new BasicCard({
         image: { // Mostly, you can provide just the raw API objects
             url: 'https://scontent-frx5-1.xx.fbcdn.net/v/t31.0-8/23331040_247860109077843_3960963222186317817_o.jpg?_nc_cat=0&oh=a8b42e30f54f472bece1dc9fbecee88f&oe=5BCC4DEE',

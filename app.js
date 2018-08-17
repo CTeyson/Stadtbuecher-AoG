@@ -14,7 +14,7 @@ const {
 
 const {
     extendSupportMap,
-    foo
+    createCard
 } = require('./extensions/cards');
 
 const {dataHandler} = require('./extensions/dataHandler');
@@ -33,7 +33,7 @@ const City = (conv, params) => {
 };
 
 const CityC = (conv, params) => {
-    conv.ask("Hier bitte! ", foo(params.myCity, dataHandler(params.myCity, params.CityOption)))
+    conv.ask("Hier bitte! ", createCard(params.myCity, dataHandler(params.myCity, params.CityOption)))
 };
 
 const Support = (conv, params) => {
