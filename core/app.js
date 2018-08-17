@@ -10,14 +10,14 @@ const app = dialogflow({ debug: true });
 const {
     basicResponses,
     supportResponses,
-} = require('./response/responses'); 
+} = require('../response/responses'); 
 
 const {
     extendSupportMap,
     createCard
-} = require('./extensions/cards');
+} = require('../extensions/cards');
 
-const {dataHandler} = require('./extensions/dataHandler');
+const {dataHandler} = require('../extensions/dataHandler');
 
 function getRandom(mySpeech) {
     var randomNumber = Math.floor((Math.random() * mySpeech.length) + 0);

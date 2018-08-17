@@ -2,7 +2,6 @@
 
 const {ssml} = require('../extensions/utils');
 
-
 const basicResponses = {
   welcome: 'Willkommen bei den Stadtbüchern. Du kannst mich verschiedene Dinge über das ILC oder zu Städten fragen. Wie kann ich dir weiterhelfen?', 
   goodbye: ['Tschüss', 'Auf Wiedersehen', 'Bis bald!'],
