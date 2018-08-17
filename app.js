@@ -37,7 +37,6 @@ const CityC = (conv, params) => {
     if(params.CityOption=="Link"){
         conv.ask("Hier bitte! ", createCard(params.myCity, dataHandler(params.myCity, params.CityOption)))
     }else{
-        conv.ask(params.CityOption);
         conv.ask(basicResponses.understanding);
     }
 };
