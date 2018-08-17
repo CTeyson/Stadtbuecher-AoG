@@ -1,0 +1,78 @@
+'use strict';
+
+const {
+    BasicCard,
+    Button,
+} = require('actions-on-google');
+
+const extendSupportMap = {
+    'ILC': new BasicCard({
+        image: { // Mostly, you can provide just the raw API objects
+            url: 'https://scontent-frx5-1.xx.fbcdn.net/v/t31.0-8/23331040_247860109077843_3960963222186317817_o.jpg?_nc_cat=0&oh=a8b42e30f54f472bece1dc9fbecee88f&oe=5BCC4DEE',
+            accessibilityText: 'ILC Logo',
+        },
+        buttons: new Button({ // Wrapper for complex sub Objects
+            title: 'Erfahre mehr über das Projekt',
+            url: 'https://www.stadtbuecher.de/de/about/',
+        }),
+        display: 'WHITE',
+    }),
+    'Stadtbücher': new BasicCard({
+        image: { // Mostly, you can provide just the raw API objects
+            url: 'https://www.stadtbuecher.de/site/templates/img/slider_goerlitz_liber_actorum.jpg',
+            accessibilityText: 'ILC Logo',
+        },
+        buttons: new Button({ // Wrapper for complex sub Objects
+            title: 'Erfahre mehr über Stadtbücher',
+            url: 'https://www.stadtbuecher.de/de/staedte/',
+        }),
+        display: 'WHITE',
+    }),
+    'Archive': new BasicCard({
+        image: { // Mostly, you can provide just the raw API objects
+            url: 'https://www.stadtbuecher.de/site/templates/img/slider_chateau_chantilly.jpg',
+            accessibilityText: 'ILC Logo',
+        },
+        buttons: new Button({ // Wrapper for complex sub Objects
+            title: 'Erfahre mehr über Archive',
+            url: 'https://www.stadtbuecher.de/de/archive/',
+        }),
+        display: 'WHITE',
+    }),
+    'Allgemein': new BasicCard({
+        image: { // Mostly, you can provide just the raw API objects
+            url: 'https://scontent-frx5-1.xx.fbcdn.net/v/t31.0-8/23331040_247860109077843_3960963222186317817_o.jpg?_nc_cat=0&oh=a8b42e30f54f472bece1dc9fbecee88f&oe=5BCC4DEE',
+            accessibilityText: 'ILC Logo',
+        },
+        buttons: new Button({ // Wrapper for complex sub Objects
+            title: 'Erfahre mehr über das Projekt',
+            url: 'https://www.stadtbuecher.de/de/about/',
+        }),
+        display: 'WHITE',
+    }),
+    'Ende': new BasicCard({
+        image: { // Mostly, you can provide just the raw API objects
+            url: 'https://scontent-frx5-1.xx.fbcdn.net/v/t31.0-8/23331040_247860109077843_3960963222186317817_o.jpg?_nc_cat=0&oh=a8b42e30f54f472bece1dc9fbecee88f&oe=5BCC4DEE',
+            accessibilityText: 'ILC Logo',
+        },
+        buttons: new Button({ // Wrapper for complex sub Objects
+            title: 'Besuch uns doch mal.',
+            url: 'https://www.stadtbuecher.de/',
+        }),
+        display: 'WHITE',
+    }),
+};
+
+module.exports = { extendSupportMap, foo: function (city,link){
+    return new BasicCard({
+        image: { // Mostly, you can provide just the raw API objects
+            url: 'https://scontent-frx5-1.xx.fbcdn.net/v/t31.0-8/23331040_247860109077843_3960963222186317817_o.jpg?_nc_cat=0&oh=a8b42e30f54f472bece1dc9fbecee88f&oe=5BCC4DEE',
+            accessibilityText: 'ILC Logo',
+        },
+        buttons: new Button({ // Wrapper for complex sub Objects
+            title: 'Hier die Seite von '+city,
+            url: link,
+        }),
+        display: 'WHITE',
+    })
+} };
