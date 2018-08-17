@@ -36,7 +36,10 @@ const City = (conv, params) => {
 const CityC = (conv, params) => {
     if(params.CityOption=="Link"){
         conv.ask("Hier bitte! ", createCard(params.myCity, dataHandler(params.myCity, params.CityOption)))
-    }else{
+    }else if(params.CityOption=="Geschichte"){
+        conv.ask(dataHandler(params.myCity, params.CityOption));
+    }
+    else{
         conv.ask(basicResponses.understanding);
     }
 };
