@@ -5,6 +5,8 @@ const {
     Button,
 } = require('actions-on-google');
 
+const {imageDatabbase} = require('../response/imageDatabase');
+
 const extendSupportMap = {
     'ILC': new BasicCard({
         image: { // Mostly, you can provide just the raw API objects

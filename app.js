@@ -30,10 +30,11 @@ const welcome = (conv) => {
 
 const City = (conv, params) => {
     conv.ask(dataHandler(params.geocity, "records"))
+    conv.ask(new Suggestions('Geschichte','Link'));
 };
 
 const CityC = (conv, params) => {
-    conv.ask("Hier bitte! ", createCard(params.myCity, dataHandler(params.myCity, params.CityOption)))
+    if(params.myCity=="Link"){conv.ask("Hier bitte! ", createCard(params.myCity, dataHandler(params.myCity, params.CityOption)))};
 };
 
 const Support = (conv, params) => {
