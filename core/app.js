@@ -10,14 +10,14 @@ const app = dialogflow({ debug: true });
 const {
     basicResponses,
     supportResponses,
-} = require('./response/responses'); 
+} = require('../response/responses'); 
 
 const {
     extendSupportMap,
     createCard
-} = require('./extensions/cards');
+} = require('../extensions/cards');
 
-const {dataHandler} = require('./extensions/dataHandler');
+const {dataHandler} = require('../extensions/dataHandler');
 
 function getRandom(mySpeech) {
     var randomNumber = Math.floor((Math.random() * mySpeech.length) + 0);
@@ -47,13 +47,16 @@ const CityC = (conv, params) => {
 const Support = (conv, params) => {
     if (params.ProjectInformation == "ILC") {
         conv.ask(supportResponses.ilc);
+        conv.ask(new Suggestions('Was sind Archive?', 'Was sind Stadtbücher?'));
     } else if (params.ProjectInformation == "Stadtbücher") {
         conv.ask(supportResponses.stadtbuecher);
+        conv.ask(new Suggestions('Was sind Archive?', "Was ist das ILC?"));
     } else if (params.ProjectInformation == "Archive") {
         conv.ask(supportResponses.archive);
+        conv.ask(new Suggestions('Was sind Stadtbücher?', "Was ist das ILC?"));
     } else if (params.ProjectInformation == "Allgemein") {
         conv.ask(supportResponses.allg);
-        conv.ask(new Suggestions('Was sind Archive?', 'Was sind Stadtbücher?', "Was ist das ILC?"));
+        conv.ask(new Suggestions('Was sind Archive?', 'Was sind Stadtbücher?', 'Was ist das ILC?'));
     }
     conv.ask(extendSupportMap[params.ProjectInformation]);
 };

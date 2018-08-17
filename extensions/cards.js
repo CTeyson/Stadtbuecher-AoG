@@ -10,7 +10,7 @@ const {imageDatabbase} = require('../response/imageDatabase');
 const extendSupportMap = {
     'ILC': new BasicCard({
         image: { // Mostly, you can provide just the raw API objects
-            url: 'https://scontent-frx5-1.xx.fbcdn.net/v/t31.0-8/23331040_247860109077843_3960963222186317817_o.jpg?_nc_cat=0&oh=a8b42e30f54f472bece1dc9fbecee88f&oe=5BCC4DEE',
+            url: imageDatabbase.default,
             accessibilityText: 'ILC Logo',
         },
         buttons: new Button({ // Wrapper for complex sub Objects
@@ -21,7 +21,7 @@ const extendSupportMap = {
     }),
     'Stadtbücher': new BasicCard({
         image: { // Mostly, you can provide just the raw API objects
-            url: 'https://www.stadtbuecher.de/site/templates/img/slider_goerlitz_liber_actorum.jpg',
+            url: imageDatabbase.stadtbuch,
             accessibilityText: 'ILC Logo',
         },
         buttons: new Button({ // Wrapper for complex sub Objects
@@ -32,7 +32,7 @@ const extendSupportMap = {
     }),
     'Archive': new BasicCard({
         image: { // Mostly, you can provide just the raw API objects
-            url: 'https://www.stadtbuecher.de/site/templates/img/slider_chateau_chantilly.jpg',
+            url: imageDatabbase.archiv,
             accessibilityText: 'ILC Logo',
         },
         buttons: new Button({ // Wrapper for complex sub Objects
@@ -43,7 +43,7 @@ const extendSupportMap = {
     }),
     'Allgemein': new BasicCard({
         image: { // Mostly, you can provide just the raw API objects
-            url: 'https://scontent-frx5-1.xx.fbcdn.net/v/t31.0-8/23331040_247860109077843_3960963222186317817_o.jpg?_nc_cat=0&oh=a8b42e30f54f472bece1dc9fbecee88f&oe=5BCC4DEE',
+            url: imageDatabbase.default,
             accessibilityText: 'ILC Logo',
         },
         buttons: new Button({ // Wrapper for complex sub Objects
@@ -54,7 +54,7 @@ const extendSupportMap = {
     }),
     'Ende': new BasicCard({
         image: { // Mostly, you can provide just the raw API objects
-            url: 'https://scontent-frx5-1.xx.fbcdn.net/v/t31.0-8/23331040_247860109077843_3960963222186317817_o.jpg?_nc_cat=0&oh=a8b42e30f54f472bece1dc9fbecee88f&oe=5BCC4DEE',
+            url: imageDatabbase.default,
             accessibilityText: 'ILC Logo',
         },
         buttons: new Button({ // Wrapper for complex sub Objects
