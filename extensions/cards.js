@@ -9,55 +9,55 @@ const {imageDatabbase} = require('../response/imageDatabase');
 
 const extendSupportMap = {
     'ILC': new BasicCard({
-        image: { // Mostly, you can provide just the raw API objects
+        image: {
             url: imageDatabbase.default,
             accessibilityText: 'ILC Logo',
         },
-        buttons: new Button({ // Wrapper for complex sub Objects
+        buttons: new Button({ 
             title: 'Erfahre mehr über das Projekt',
             url: 'https://www.stadtbuecher.de/de/about/',
         }),
         display: 'WHITE',
     }),
     'Stadtbücher': new BasicCard({
-        image: { // Mostly, you can provide just the raw API objects
+        image: { 
             url: imageDatabbase.stadtbuch,
             accessibilityText: 'ILC Logo',
         },
-        buttons: new Button({ // Wrapper for complex sub Objects
+        buttons: new Button({
             title: 'Erfahre mehr über Stadtbücher',
             url: 'https://www.stadtbuecher.de/de/staedte/',
         }),
         display: 'WHITE',
     }),
     'Archive': new BasicCard({
-        image: { // Mostly, you can provide just the raw API objects
+        image: { 
             url: imageDatabbase.archiv,
             accessibilityText: 'ILC Logo',
         },
-        buttons: new Button({ // Wrapper for complex sub Objects
+        buttons: new Button({ 
             title: 'Erfahre mehr über Archive',
             url: 'https://www.stadtbuecher.de/de/archive/',
         }),
         display: 'WHITE',
     }),
     'Allgemein': new BasicCard({
-        image: { // Mostly, you can provide just the raw API objects
+        image: {
             url: imageDatabbase.default,
             accessibilityText: 'ILC Logo',
         },
-        buttons: new Button({ // Wrapper for complex sub Objects
+        buttons: new Button({
             title: 'Erfahre mehr über das Projekt',
             url: 'https://www.stadtbuecher.de/de/about/',
         }),
         display: 'WHITE',
     }),
     'Ende': new BasicCard({
-        image: { // Mostly, you can provide just the raw API objects
+        image: {
             url: imageDatabbase.default,
             accessibilityText: 'ILC Logo',
         },
-        buttons: new Button({ // Wrapper for complex sub Objects
+        buttons: new Button({
             title: 'Besuch uns doch mal.',
             url: 'https://www.stadtbuecher.de/',
         }),
@@ -65,13 +65,21 @@ const extendSupportMap = {
     }),
 };
 
-module.exports = { extendSupportMap, createCard: function (city,link){
+module.exports = { extendSupportMap, 
+    /**
+     * Creates a BasicCard object 
+     * 
+     * @param {string} city Name of the City
+     * @param {string} link Link to the city on the project website
+     * @returns {object}
+     */
+    createCard: function (city,link){
     return new BasicCard({
-        image: { // Mostly, you can provide just the raw API objects
-            url: 'https://scontent-frx5-1.xx.fbcdn.net/v/t31.0-8/23331040_247860109077843_3960963222186317817_o.jpg?_nc_cat=0&oh=a8b42e30f54f472bece1dc9fbecee88f&oe=5BCC4DEE',
+        image: {
+            url: imageDatabbase.default,
             accessibilityText: 'ILC Logo',
         },
-        buttons: new Button({ // Wrapper for complex sub Objects
+        buttons: new Button({
             title: 'Hier die Seite von '+city,
             url: link,
         }),

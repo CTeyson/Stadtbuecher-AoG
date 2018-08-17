@@ -1,6 +1,13 @@
 const {data} = require('../data/database'); 
 
 module.exports = {
+    /**
+     * Search through the database
+     * 
+     * @param {string} searchIntent Name of the city 
+     * @param {string} searchType What Information the user requested
+     * @returns {string}
+     */
     dataHandler: function (searchIntent, searchType) {
         var len1 = data.length;
         var answer;
