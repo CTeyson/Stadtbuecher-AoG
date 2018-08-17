@@ -1,6 +1,6 @@
 'use strict';
 
-const {ssml} = require('./utils');
+const {ssml} = require('../extensions/utils');
 
 
 const basicResponses = {
