@@ -34,7 +34,11 @@ function getRandom(mySpeech) {
  * Welcomes the user to the action
  */
 const welcome = (conv) => {
-    conv.ask(basicResponses.welcome);
+    if (conv.user.last.seen) {
+        conv.ask(basicResponses.returning);
+      } else{
+        conv.ask(basicResponses.welcome);
+      }
 };
 
 /**

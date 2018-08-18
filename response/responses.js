@@ -1,9 +1,8 @@
 'use strict';
 
-const {ssml} = require('../extensions/utils');
-
 const basicResponses = {
   welcome: 'Willkommen bei den Stadtbüchern. Du kannst mich verschiedene Dinge über das ILC oder zu Städten fragen. Wie kann ich dir weiterhelfen?', 
+  returning: 'Willkommen zurück. Wie kann ich dir heute helfen?',
   goodbye: ['Tschüss', 'Auf Wiedersehen', 'Bis bald!'],
   understanding: "Tut mir leid, dass habe ich wohl nicht verstanden.",
   friendly: ['Kein Problem', 'Jederzeit!', "Gerne doch", 'Ich freue mich, dass ich helfen konnte', 'Für dich doch immer', "Bitte sehr!"], 

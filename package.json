@@ -1,6 +1,6 @@
 {
-  "name": "ssml-examples",
-  "description": "The biggest Index for citybooks for the Google Assistant",
+  "name": "stadtbuecher",
+  "description": "The Biggest Index of german citybooks for the Google Assistant",
   "version": "0.0.1",
   "private": true,
   "license": "Apache Version 2.0",
