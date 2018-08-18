@@ -1,12 +1,6 @@
 const { data } = require('../data/database');
 const { basicResponses } = require('../response/responses');
-
-const SEARCH_RECORDS = "records";
-const SEARCH_HISTORY = "Geschichte";
-const SEARCH_MORE = "Mehr";
-const SEARCH_LITERATUR = "Literatur";
-const SEARCH_STADTBUCH = "Stadtbücher";
-const SEARCH_ARCHIVE = "Archive";
+const {search} = require('./helper');
 
 module.exports = {
     /**
@@ -22,7 +16,7 @@ module.exports = {
         for (var j = 0; j < data[0].cities.city.length; j++) {
             var mem = data[0].cities.city[j];
             if (mem.name == searchIntent) {
-                if (searchType == SEARCH_RECORDS) {
+                if (searchType == search.RECORDS) {
                     answer = mem.name;
                     if (mem.num_city_books === 0) {
                         answer += " besitzt in der Datenbank keine Stadtbücher.\n";
@@ -33,16 +27,16 @@ module.exports = {
                     }
                     answer += " Wie kann ich dir jetzt weiterhelfen? Brauchst du den Link zur Stadt oder Infos über die Geschichte.";
                     return answer;
-                } else if (searchType == SEARCH_HISTORY) {
+                } else if (searchType == search.HISTORY) {
                     answer = "<speak>Okay hier ist die Geschichte von " + mem.name + ":\n <break time='300ms'/>" + mem.history+"</speak>";
                     return answer;
-                } else if (searchType == SEARCH_MORE) {
+                } else if (searchType == search.MORE) {
                     answer = mem.link;
                     return answer;
-                } else if (searchType == SEARCH_LITERATUR) {
+                } else if (searchType == search.LITERATUR) {
                     answer = mem.literature.item[0];
                     return answer;
-                } else if (searchType == SEARCH_STADTBUCH) {
+                } else if (searchType == search.STADTBUCH) {
                     var len1 = mem.city_books.city_book_series.length;
                     if (len1 > 3 && len1 != 0) {
                         answer = '<speak><p><s>Hier sind Auszüge der Stadtbücher von ' + mem.name + ':<break time="300ms"/></s></p>';
@@ -55,7 +49,7 @@ module.exports = {
                         answer = mem.name + " hat keine Stadtbücher.";
                     }
                     return answer;
-                } else if (searchType == SEARCH_ARCHIVE) {
+                } else if (searchType == search.ARCHIVE) {
                     answer = "Folgende Archive sind hinterlegt: \n" + mem.archive.name;
                     return answer;
                 } else {
