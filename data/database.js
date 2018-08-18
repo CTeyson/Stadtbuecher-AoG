@@ -13,7 +13,7 @@ var data = data = [{
             "city_books": {
                 "city_book_series": [{
                     "description":
-                        "Extract des Bauerwitzer Hospital Rechnungs Buch, 1791-1791 (Bauerwitz, Kategorie 10. Rechnungsbücher)",
+                        "Extract des Bauerwitzer Hospital Rechnungs Buch, 1791-1791 (Bauerwitz, Kategorie 10 Rechnungsbücher)",
                     "_id": 163900
                 },
                 {
@@ -34,13 +34,13 @@ var data = data = [{
             "link": "https://www.stadtbuecher.de/de/stadtbuecher/deutschland/nordrhein-westfalen/kerpen/",
             "city_books": {
                 "city_book_series": [{
-                    "description": "Abgabekataster, 1655-1792 (Wurzen, Kategorie 9. Zollbücher)", "_id": 117385
+                    "description": "Abgabekataster, 1655-1792 (Wurzen, Kategorie 9 Zollbücher)", "_id": 117385
                 },
-                { "description": "Akziserechnungen, 1753-1753 (Wurzen, Kategorie 10. Rechnungsbücher)", "_id": 117399 },
-                { "description": "Almosenkataster, 1664-1775 (Wurzen, Kategorie 9. Zollbücher)", "_id": 117390 },
-                { "description": "Aufstellungen über den Steuerzins und andere Dienste, 1706-1793 (Wurzen, Kategorie 9. Zollbücher)", "_id": 117388 },
-                { "description": "Beschreibung der in der Wurzner Pflege gelegenen Dorfschaften, 1700-1800 (Wurzen, Kategorie 2. Kopiare, Register)", "_id": 117366 },
-                { "description": "Brandversicherungskataster, 1786-1839 (Wurzen, Kategorie 9. Zollbücher)", "_id": 117392 },
+                { "description": "Akziserechnungen, 1753-1753 (Wurzen, Kategorie 10 Rechnungsbücher)", "_id": 117399 },
+                { "description": "Almosenkataster, 1664-1775 (Wurzen, Kategorie 9 Zollbücher)", "_id": 117390 },
+                { "description": "Aufstellungen über den Steuerzins und andere Dienste, 1706-1793 (Wurzen, Kategorie 9 Zollbücher)", "_id": 117388 },
+                { "description": "Beschreibung der in der Wurzner Pflege gelegenen Dorfschaften, 1700-1800 (Wurzen, Kategorie 2 Kopiare, Register)", "_id": 117366 },
+                { "description": "Brandversicherungskataster, 1786-1839 (Wurzen, Kategorie 9 Zollbücher)", "_id": 117392 },
                 { "description": "Brauordnung, 1722-1722 (Wurzen, Kategorie 3. Statuten, Willküren, Ordnungen, Rezesse)", "_id": 117364 },
                 { "description": "Bürgerbücher, 1606-1832 (Wurzen, Kategorie 5. Bürgerbücher, Erbhuldigungen)", "_id": 117370 },
                 { "description": "Depositenbuch, 1755-1817 (Wurzen, Kategorie 10. Rechnungsbücher)", "_id": 145220 },

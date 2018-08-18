@@ -44,7 +44,7 @@ const welcome = (conv) => {
  */
 const City = (conv, params) => {
     conv.ask(dataHandler(params.geocity, "records"))
-    conv.ask(new Suggestions('Geschichte','Link'));
+    conv.ask(new Suggestions('Geschichte','Link','Archive','Stadtbücher', 'Literatur'));
 };
 
 /**
@@ -54,13 +54,12 @@ const City = (conv, params) => {
  * @param {string} CityOption Type of requested information 
  */
 const CityC = (conv, params) => {
-    if(params.CityOption=="Link"){
+    if(params.CityOption=="Mehr"){
         conv.ask("Hier bitte! ", createCard(params.myCity, dataHandler(params.myCity, params.CityOption)))
-    }else if(params.CityOption=="Geschichte"){
+    }else if(params.CityOption){
         conv.ask(dataHandler(params.myCity, params.CityOption));
-    }
-    else{
-        conv.ask(basicResponses.understanding);
+    }else{
+        conv.ask("Error Handling: "+params.CityOption);
     }
 };
 
