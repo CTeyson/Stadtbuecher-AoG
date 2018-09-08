@@ -17,6 +17,8 @@ const {
     createCard
 } = require('../extensions/cards');
 
+const {getDailyCity} = require('../extensions/dailyCity');
+
 const {dataHandler} = require('../extensions/dataHandler');
 
 /**
@@ -99,9 +101,18 @@ const socialEvent = (conv, params) => {
         conv.ask(getRandom(basicResponses.friendly));
     } else if (params.socialInteraction == "bad") {
         conv.ask(getRandom(basicResponses.unfriendly));
-    } else {
+    }else if(params.socialInteraction == "condition"){
+        conv.ask(basicResponses.condition);
+    }else {
         conv.ask(basicResponses.understanding);
     }
+}
+
+/**
+ * Presents the city of the day
+ */
+const DailyCity = (conv) => {
+    conv.ask(getDailyCity()); 
 }
 
 /**
@@ -114,6 +125,7 @@ const goodbye = (conv) => {
 app.intent('Welcome', welcome);
 app.intent('City', City);
 app.intent('CityC', CityC);
+app.intent('DailyCity', DailyCity);
 app.intent('Support', Support);
 app.intent('socialEvent', socialEvent);
 app.intent('goodbye', goodbye);

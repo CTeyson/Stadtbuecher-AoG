@@ -7,6 +7,7 @@ const basicResponses = {
   understanding: "Tut mir leid, dass habe ich wohl nicht verstanden.",
   friendly: ['Kein Problem', 'Jederzeit!', "Gerne doch", 'Ich freue mich, dass ich helfen konnte', 'Für dich doch immer', "Bitte sehr!"], 
   unfriendly: ['Aber, aber...', 'Ich bin zu schlau um darauf zu antworten.', 'Bleiben wir sachlich.', 'So spricht man aber nicht mit seinem Assistenten.'], 
+  condition: "Mir geht es gut danke! Wie kann ich dir helfen?",
 };
 
 const supportResponses = {
