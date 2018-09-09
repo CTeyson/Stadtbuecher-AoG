@@ -34,11 +34,11 @@ module.exports = {
                     answer = mem.link;
                     return answer;
                 } else if (searchType == search.LITERATUR) {
-                    if(mem.literature.item[0][0]){
-                        answer = "Hier ist ein Beispiel der Literatur: "+mem.literature.item[0][0];
+                    if(mem.literature.item[0]){
+                        answer = "Hier ist ein Beispiel der Literatur: "+mem.literature.item[0].description;     
                     }else{
-                        answer = "Die Stadt besitzt in der Datenbank aktuell keine Literatur."; 
-                    }
+                        answer = "Die Stadt besitzt in der Datenbank aktuell keine Literatur.";     
+                    }  
                     return answer;
                 } else if (searchType == search.STADTBUCH) {
                     var len1 = mem.city_books.city_book_series.length;
