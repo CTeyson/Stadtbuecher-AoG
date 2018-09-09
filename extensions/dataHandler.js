@@ -34,7 +34,7 @@ module.exports = {
                     answer = mem.link;
                     return answer;
                 } else if (searchType == search.LITERATUR) {
-                    if(mem.literature.item[0]){
+                    if(mem.literature){
                         answer = "Hier ist ein Beispiel der Literatur: "+mem.literature.item[0].description;     
                     }else{
                         answer = "Die Stadt besitzt in der Datenbank aktuell keine Literatur.";     
