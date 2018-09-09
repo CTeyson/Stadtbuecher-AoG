@@ -64,14 +64,14 @@ var data = data = [{
             "city_books": {
                 "city_book_series": [{
                     "description":
-                        "Extract des Bauerwitzer Hospital Rechnungs Buch, 1791-1791 (Bauerwitz, Kategorie 10 Rechnungsbücher)",
+                        "Extract des Kölner Hospital Rechnungs Buch, 1791-1791 (Köln, Kategorie 10 Rechnungsbücher)",
                     "_id": 163900
                 },
                 {
-                    "description": "Rep[ertorium] 26 Fürstentu[um] Jägerndorf Stadt Bauerwitz, 1924-1924 (Bauerwitz)",
+                    "description": "Rep[ertorium] 26 Fürstentu[um] Jägerndorf Stadt Köln, 1924-1924 (Köln)",
                     "_id": 223943
                 },
-                { "description": "Urbarium des gutes Bauerwitz aus dem Böhmischen in das deutsche transferirt, 1800-1900 (Bauerwitz)", "_id": 223950 }
+                { "description": "Urbarium des gutes Köln aus dem Böhmischen in das deutsche transferirt, 1800-1900 (Köln)", "_id": 223950 }
                 ]
             }
         },
