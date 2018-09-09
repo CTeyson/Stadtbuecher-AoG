@@ -88,6 +88,8 @@ const Support = (conv, params) => {
     } else if (params.ProjectInformation == "Allgemein") {
         conv.ask(supportResponses.allg);
         conv.ask(new Suggestions('Was sind Archive?', 'Was sind Stadtbücher?', 'Was ist das ILC?'));
+    } else if(params.ProjectInformation == "Assistent") {
+        conv.ask(supportResponses.assistent); 
     }
     conv.ask(extendSupportMap[params.ProjectInformation]);
 };

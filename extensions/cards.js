@@ -52,6 +52,17 @@ const extendSupportMap = {
         }),
         display: 'WHITE',
     }),
+    'Assistent': new BasicCard({
+        image: {
+            url: imageDatabbase.default,
+            accessibilityText: 'ILC Logo',
+        },
+        buttons: new Button({
+            title: 'Erfahre mehr über das Projekt',
+            url: 'https://www.stadtbuecher.de/de/about/',
+        }),
+        display: 'WHITE',
+    }),
     'Ende': new BasicCard({
         image: {
             url: imageDatabbase.default,

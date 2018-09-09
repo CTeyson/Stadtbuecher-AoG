@@ -11,6 +11,7 @@ const basicResponses = {
 };
 
 const supportResponses = {
+    assistent: 'Ich bin dein persönlicher Assistent und helfe dir das ILC besser kennenzulernen und zu durchsuchen.', 
     allg: 'Du kannst mich nach Städten fragen und ich schaue nach, ob wir Informationen in der Datenbank haben. Außerdem kannst du mich danach Fragen worum es beim ILC geht und was Stadtbücher und Archive sind.',
     ilc: 'Der Index Librorum Civitatum ist ein Instrument der historischen Grundlagenforschung. Auf dem ILC kannst du auf den größten Index für deutschsprachige Stadtbücher zugreifen. Betreut wird das Projekt von der Universität Halle und dem CCeH.',
     stadtbuecher: 'Stadtbücher sind Kodizes, die seit dem dreizehnten Jahrhundert in städtischen Kanzleien zu Verwaltungszwecken geführt wurden. Stadtbücher ermöglichen einen der ergiebigsten Einblicke in das Leben mittelalterlicher und frühneuzeitlicher Städte. Die Überlieferung ist aber extrem breit gestreut und dadurch für die Forschung schwer zugänglich und schlecht zu überblicken. Der ILC soll dabei helfen einen Überblick zu erhalten.', 
