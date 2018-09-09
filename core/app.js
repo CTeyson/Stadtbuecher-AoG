@@ -18,6 +18,7 @@ const {
 } = require('../extensions/cards');
 
 const {getDailyCity} = require('../extensions/dailyCity');
+const {getCityList} = require('../extensions/cityList'); 
 
 const {dataHandler} = require('../extensions/dataHandler');
 
@@ -116,6 +117,15 @@ const DailyCity = (conv) => {
 }
 
 /**
+ * Overview of the different cities, sorted by alphabet
+ * 
+ * @param {string} Letters Letter who defines search
+ */
+const CityList = (conv, param) => {
+    conv.ask(getCityList(param.Letters)); 
+}
+
+/**
  * Saying goodbye to the user, when leaving the action
  */
 const goodbye = (conv) => {
@@ -126,6 +136,7 @@ app.intent('Welcome', welcome);
 app.intent('City', City);
 app.intent('CityC', CityC);
 app.intent('DailyCity', DailyCity);
+app.intent('CityList', CityList);
 app.intent('Support', Support);
 app.intent('socialEvent', socialEvent);
 app.intent('goodbye', goodbye);
