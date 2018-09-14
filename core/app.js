@@ -19,6 +19,7 @@ const {
 
 const {getDailyCity} = require('../extensions/dailyCity');
 const {getCityList} = require('../extensions/cityList'); 
+const {getComparedCity} = require('../extensions/compareCity');
 
 const {dataHandler} = require('../extensions/dataHandler');
 
@@ -128,6 +129,17 @@ const CityList = (conv, param) => {
 }
 
 /**
+ * Compares City1 with City2 based on the amount of citybooks
+ * 
+ * @param {string} city1 First City 
+ * @param {string} city2 Second City 
+ */
+const CompareCity = (conv, param) => {
+    //conv.ask(param.geoCity+":"+param.geoCity2);
+    conv.ask(getComparedCity(param.geoCity, param.geoCity2));
+}
+
+/**
  * Saying goodbye to the user, when leaving the action
  */
 const goodbye = (conv) => {
@@ -139,6 +151,7 @@ app.intent('City', City);
 app.intent('CityC', CityC);
 app.intent('DailyCity', DailyCity);
 app.intent('CityList', CityList);
+app.intent('CompareCity', CompareCity);
 app.intent('Support', Support);
 app.intent('socialEvent', socialEvent);
 app.intent('goodbye', goodbye);
