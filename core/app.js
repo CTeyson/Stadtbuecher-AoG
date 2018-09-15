@@ -18,6 +18,8 @@ const {
 } = require('../extensions/cards');
 
 const {getDailyCity} = require('../extensions/dailyCity');
+const {getCityList} = require('../extensions/cityList'); 
+const {getComparedCity} = require('../extensions/compareCity');
 
 const {dataHandler} = require('../extensions/dataHandler');
 
@@ -87,6 +89,8 @@ const Support = (conv, params) => {
     } else if (params.ProjectInformation == "Allgemein") {
         conv.ask(supportResponses.allg);
         conv.ask(new Suggestions('Was sind Archive?', 'Was sind Stadtbücher?', 'Was ist das ILC?'));
+    } else if(params.ProjectInformation == "Assistent") {
+        conv.ask(supportResponses.assistent); 
     }
     conv.ask(extendSupportMap[params.ProjectInformation]);
 };
@@ -116,6 +120,26 @@ const DailyCity = (conv) => {
 }
 
 /**
+ * Overview of the different cities, sorted by alphabet
+ * 
+ * @param {string} Letters Letter who defines search
+ */
+const CityList = (conv, param) => {
+    conv.ask(getCityList(param.Letters)); 
+}
+
+/**
+ * Compares City1 with City2 based on the amount of citybooks
+ * 
+ * @param {string} city1 First City 
+ * @param {string} city2 Second City 
+ */
+const CompareCity = (conv, param) => {
+    //conv.ask(param.geoCity+":"+param.geoCity2);
+    conv.ask(getComparedCity(param.geoCity, param.geoCity2));
+}
+
+/**
  * Saying goodbye to the user, when leaving the action
  */
 const goodbye = (conv) => {
@@ -126,6 +150,8 @@ app.intent('Welcome', welcome);
 app.intent('City', City);
 app.intent('CityC', CityC);
 app.intent('DailyCity', DailyCity);
+app.intent('CityList', CityList);
+app.intent('CompareCity', CompareCity);
 app.intent('Support', Support);
 app.intent('socialEvent', socialEvent);
 app.intent('goodbye', goodbye);
