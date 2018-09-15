@@ -7,7 +7,7 @@ var data = data = [{
                 "name":"Aachen",
                 "history":"Leider ist die Gesichte noch nicht hinterlegt",
                 "location":{"lat":"50.775345","lng":"6.083887"},
-                "num_city_books":10,
+                "num_city_books": 10,
                 "link": "https://www.stadtbuecher.de/de/stadtbuecher/deutschland/nordrhein-westfalen/aachen/",                
                 "city_books":{
                     "city_book_series":[
